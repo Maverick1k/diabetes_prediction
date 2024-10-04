@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction - Diabetes Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='prediction.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Diabetes Prediction</h1>
+    </header>
+
+    <h2>Kindly Enter your details-</h2>
+    <form action="/predict" method="post">
+        Gender (1: Male, 0: Female): <input type="number" name="gender"><br>
+        Age: <input type="number" name="age"><br>
+        Hypertension (0: No, 1: Yes): <input type="number" name="hypertension"><br>
+        Heart Disease (0: No, 1: Yes): <input type="number" name="heart_disease"><br>
+        Smoking History (0: No Info, 1: Current, 2: Not Current, 3: Former, 4: Never): <input type="number"
+            name="smoking_history"><br>
+        BMI: <input type="number" step="0.01" name="bmi"><br>
+        HbA1c Level: <input type="number" step="0.01" name="hba1c_level"><br>
+        Blood Glucose Level: <input type="number" name="blood_glucose_level"><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+
+</html>
